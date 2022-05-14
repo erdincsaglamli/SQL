@@ -1,0 +1,11 @@
+SQL Injection
+Insertion or ‘Injection’ of some SQL Query from the input data of the client to the application is called SQL Injection. 
+They can perform CRUD operations on the database and can read to vulnerabilities and loss of data.
+
+It can occur in 2 ways:
+
+Data is used to dynamically construct an SQL Query.
+Unintended data from an untrusted source enters the application.
+
+The consequences of SQL Injections can be Confidentiality issues, Authentication breaches, Authorization vulnerabilities, and breaking the Integrity of the system.
+
