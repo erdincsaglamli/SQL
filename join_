@@ -1,0 +1,75 @@
+Joins in SQL
+ 
+Joins are a SQL concept that allows us to fetch data after combining multiple tables of a database.
+
+The following are the types of joins in SQL:
+
+____________________________________________________________________________________________________________________________________________________
+
+INNER JOIN: Returns any records which have matching values in both tables.
+
+
+The SQL code will be as follows,
+
+SELECT orders.order_id, products.product_name,customers.customer_name,products.price
+FROM orders
+INNER JOIN products ON products.product_id = order.product_id
+INNER JOIN customers on customers.customer_id = order.customer_id;
+NATURAL JOIN: It is a special type of inner join based on the fact that the column names and datatypes are the same on both tables.
+Syntax:
+
+Select * from table1 Natural JOIN table2;
+Example:
+
+Select * from Customers Natural JOIN Orders;
+In the above example, we are merging the Customers and Orders table shown above using a NATURAL JOIN based on the common column customer_id.
+
+
+____________________________________________________________________________________________________________________________________________________
+
+
+RIGHT JOIN: Returns all of the records from the second table, along with any matching records from the first.
+
+
+Applying right join on these tables,
+
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees
+ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+The resultant table will be,
+
+
+____________________________________________________________________________________________________________________________________________________
+
+
+LEFT JOIN: Returns all of the records from the first table, along with any matching records from the second table.
+
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders
+ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+The top few entries of the resultant table will appear as shown in the below image.
+
+
+____________________________________________________________________________________________________________________________________________________
+
+
+
+FULL JOIN: Returns all records from both tables when there is a match.
+
+
+Applying Outer Join on the above 2 tables, using the code:
+
+SELECT  ID, NAME, AMOUNT, DATE
+  FROM CUSTOMERS
+  FULL JOIN ORDERS
+  ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+We will get the following table as the result of the outer join.
+
+
+
+____________________________________________________________________________________________________________________________________________________
