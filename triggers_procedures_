@@ -1,0 +1,46 @@
+Triggers in SQL
+SQL codes automatically executed in response to a certain event occurring in a table of a database are called triggers. There cannot be more than 1 trigger with a similar action time and event for one table.
+
+Syntax:
+
+Create Trigger Trigger_Name
+(Before | After)  [ Insert | Update | Delete]
+on [Table_Name]
+[ for each row | for each column ]
+[ trigger_body ]
+Example:
+
+CREATE TRIGGER trigger1
+before INSERT
+ON Student
+FOR EACH ROW
+SET new.total = (new.marks/ 10) * 100;
+Here, we create a new Trigger called trigger1, just before we perform an INSERT operation on the Student table, we calculate the percentage of the marks for each row.
+Some common operations that can be performed on triggers are:
+
+DROP: This operation will drop an already existing trigger from the table.
+Syntax:
+DROP TRIGGER trigger name;
+SHOW: This will display all the triggers that are currently present in the table.
+Syntax:
+SHOW TRIGGERS IN database_name;
+
+__________________________________________________________________________________________________________________________________________________________________
+
+
+SQL Stored Procedures
+
+SQL procedures are stored in SQL codes, which can be saved for reuse again and again.
+
+Syntax:
+
+CREATE PROCEDURE procedure_name AS sql_statement
+GO;
+To execute a stored procedure,
+
+EXEC procedure_name;
+Example:
+
+CREATE PROCEDURE SelectAllCustomers AS SELECT * FROM Customers;
+GO;
+The above example creates a stored procedure called ‘SelectAllCustomers’, which selects all the records from the customer table.
