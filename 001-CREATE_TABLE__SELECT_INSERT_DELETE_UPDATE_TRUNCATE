@@ -1,0 +1,21 @@
+
+ALTER TABLE demo RENAME TO CUSTOMERS;    # tablo ismini değiştirme.
+
+
+ALTER TABLE Customers  ADD Nation varchar(50);   # yeni kolon ekleme
+ALTER TABLE Customers DROP COLUMN Nation;
+ALTER TABLE Customers ALTER COLUMN Nation datatype;
+
+
+SELECT * FROM  CUSTOMERS   
+
+INSERT INTO CUSTOMERS (name, id) VALUES ('AAAlii MEHMET', 999)
+
+update Customers  set nation ="US", age=40  # DEĞER GÜNCELLEME
+
+SELECT DATEDIFF(year, '1986/12/17', GETDATE())
+
+DELETE tABLOYU İLK HALİNE ÇEVİRMEZ, KAYITLARI SİLER (ıd'LER SON SAYAÇTAN DEVAM EDER.)
+TRUNCATE İSE, HIZLI VE İLK HALİNE ÇEVİRİR
+
+
