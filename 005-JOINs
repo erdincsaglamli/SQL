@@ -1,0 +1,58 @@
+
+SELECT U.NAMESURNAME, A.ADDRESSTEXT,U.EMAIL, C.COUNTRY
+
+
+FROM USERS U
+
+JOIN ADDRESS A ON A.USERID=I.ID
+JOIN COUNRIES C ON C.ID=A.COUNTRYID
+
+========================================================
+
+
+SELECT 
+CT.CITY, COUNT(U.ID) AS KULLANICISAYISI
+
+FROM USERS U
+
+JOIN ADDRESS A ON A.USERID=I.ID
+JOIN COUNRIES C ON C.ID=A.COUNTRYID
+
+GROUP BY CT.CITY
+
+==============================
+
+
+SELECT 
+
+U.ID, U.USERNAME, A.ADRESTEXT
+
+FROM USERS U  
+
+JOIN ADRES A ON A.USERID=U.ID  =INNER JOIN ADRES A ON A.USERID=U.ID 
+
+_________________________________________
+
+SELECT 
+
+U.ID, U.USERNAME, A.ADRESTEXT
+
+FROM USERS U  
+
+LEFT JOIN ADRES A ON A.USERID=U.ID  -- RIGHT JOIN, FULL JOIN
+
+____________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
